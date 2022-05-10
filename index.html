@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1'/>
+    <title>Benvenutti da Pane & Vino!</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link href="node_modules/bulma-calendar/dist/css/bulma-calendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero is-fullheight">
+            <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+                    <div class="navbar-brand">LOGO
+                        <a href="" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarElements">
+                            <span class="has-text-white" aria-hidden="true"></span>
+                            <span class="has-text-white" aria-hidden="true"></span>
+                            <span class="has-text-white" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <div id="navbarElements" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a href="#home" class="navbar-item has-text-white has-text-weight-semibold">
+                                HOME
+                            </a>
+                            <a href="#about-us"class="navbar-item has-text-white has-text-weight-semibold">
+                                OVER ONS
+                            </a>
+                            <a href="#menu" class="navbar-item has-text-white has-text-weight-semibold">
+                                MENU
+                            </a>
+                            <a href="#reservations" class="navbar-item has-text-white has-text-weight-semibold">
+                                RESERVATIES
+                            </a>
+                            <a href="#location" class="navbar-item has-text-white has-text-weight-semibold">
+                                LOCATIE
+                            </a>
+            
+                            <a href="https://www.facebook.com/panevinogent/" class="navbar-item has-text-white has-text-weight-semibold">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/panevinogent/" class="navbar-item has-text-white has-text-weight-semibold">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a id="lang" class="navbar-link has-text-white has-text-weight-semibold">
+                                NL
+                            </a>
+                            <div class="navbar-dropdown">
+                                <a href="" class="burger-color-keep navbar-item">
+                                    NL
+                                </a>
+                                <a href="" class="burger-color-keep navbar-item">
+                                    FR
+                                </a>
+                                <a href="" class="burger-color-keep navbar-item">
+                                    EN
+                                </a>
+                                <a href="" class="burger-color-keep navbar-item">
+                                    ES
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+        <div class="background-image"></div>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                    <h1 class="title has-text-white">WELKOM BIJ PANE & VINO</h1>
+                    <h2 class="subtitle has-text-white">SINDS 2002</h2>
+                    <a href="#reservations" class="button is-warning has-text-grey">RESERVEER EEN TAFEL</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about-us" class="section">
+        <div class="columns">
+            <div class="column auto"></div>
+            <div class="column is-two-fifths">
+                <figure class="image">
+                    <img src="images/chef.png">
+                  </figure>
+            </div>
+            <div class="column is-half about-us">
+                <h1 class="title has-text-centered is-size-4-mobile">Welkom bij <span class="color-red">Pane</span> & <span class="color-green">Vino</span></h1>
+                <h3 class="subtitle has-text-centered">Over Ons</h3>
+                <p class="has-text-centered">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div class="column auto"></div>
+        </div>
+    </section>
+
+    <!-- PARALLAX -->
+    <section id="parallax_upper" class="parallax">
+        <div class="columns quote">
+            <div class="column auto"></div>
+            <div class="column is-half-desktop is-three-fifths-tablet">
+                <h1 class="title has-text-white is-size-5-mobile">" Het geheim van het succes van de Italiaanse keuken? Ze koppelt een minimum aan gedoe aan een maximum van smaak. "</h1>
+                <h4 class="subtitle has-text-white">Antonio Carluccio</h4>
+            </div>
+            <div class="column auto"></div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="section">
+        <div class="tabs is-centered">
+            <ul>
+                <li class="tab is-active" onclick="openTab(event,'Antipasti')"><a>Antipasti</a></li>
+                <li class="tab" onclick="openTab(event,'Insalate')"><a>Insalate</a></li>
+                <li class="tab" onclick="openTab(event,'Pizze')"><a>Pizze</a></li>
+                <li class="tab" onclick="openTab(event,'Pasta')"><a>Pasta</a></li>
+                <li class="tab" onclick="openTab(event,'Secondi')"><a>Secondi Piatti</a></li>
+            </ul>
+        </div>
+        <div class="columns is-centered">
+                <div id="Antipasti" class="content-tab column is-two-fifths is-three-fifths-tablet" >
+                    <table class="table is-fullwidth">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h3 class="is-title has-text-weight-semibold">CARPACCIO</h3>
+                                    <p class="is-size-7 is-italic">Flinterdunne rauwe Contrefilet, afgewerkt met rucola, parmezaanschilfers en olijfolie</p>
+                                </td>
+                                <td>€14.50</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="is-title has-text-weight-semibold">JAMBON MELON</h3>
+                                    <p class="is-size-7 is-italic">Sappige honingmeloen geserveerd op een rijkelijk belegd bedje van Parmaham</p>
+                                </td>
+                                <td>€14.50</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="is-title has-text-weight-semibold">ANTIPASTO ALL'ITALIANA</h3>
+                                    <p class="is-size-7 is-italic">Italiaanse aperitiefschotel met verschillende vleeswaren aangevuld met zondergedroogde tomaten, olijven en gegrilde mediteraanse groenten. Ideaal om te delen!</p>
+                                </td>
+                                <td>€14.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="is-title has-text-weight-semibold">SCAMPI DELLA CASA (5 pezzi)</h3>
+                                    <p class="is-size-7 is-italic">5 scampi's geserveerd in een getomateerde, licht pittige, roomsaus</p>
+                                </td>
+                                <td>€15.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="is-title has-text-weight-semibold">SCAMPI ALL' AGLIO (5 pezzi)</h3>
+                                    <p class="is-size-7 is-italic">5 scampi's geserveerd in een klassieke Italiaanse looksaus</p>
+                                </td>
+                                <td>€15.00</td>
+                                </tr>                            
+                        </tbody>
+                    </table>
+                </div>
+                <div id="Insalate" class="content-tab column is-two-fifths is-three-fifths-tablet" style="display:none">
+                    <table class="table is-fullwidth">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h3 class="is-title has-text-weight-semibold">INSALATA MISTA</h3>
+                                    <p class="is-size-7 is-italic">Klassieke gemengde salade met een olijfolie-balsamico dressing</p>
+                                </td>
+                                <td>€6.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="is-title has-text-weight-semibold">INSALATA CAPRESE</h3>
+                                    <p class="is-size-7 is-italic">Italiaanse klassieker bestaande uit mozzarella, tomaten en basilicum</p>
+                                </td>
+                                <td>€12.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="is-title has-text-weight-semibold">INSALATA AL PROSCIUTTO DI PARMA</h3>
+                                    <p class="is-size-7 is-italic">Gemengde salade geserveerd op een rijkelijk belegd bedje van Parmaham</p>
+                                </td>
+                                <td>€15.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="is-title has-text-weight-semibold">INSALATA AL TONNO</h3>
+                                    <p class="is-size-7 is-italic">Gemengde salade aangevuld met tonijn en geserveerd met een olijfolie-balsamico dressing</p>
+                                </td>
+                                <td>€13.00</td>
+                            </tr>                      
+                        </tbody>
+                    </table>
+                </div>
+                <div id="Pizze" class="content-tab column is-four-fifths-desktop" style="display:none">
+                    <div class="columns is-centered">
+                        <div class="column is-two-fifths is-half-tablet">
+                            <table class="table is-fullwidth">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA VEGETARIANA</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, mozzarella, olijven, artisjok, kappertjes, paprika, champignons, ajuin</p>
+                                        </td>
+                                        <td>€15.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA MARGHERITA</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, mozzarella</p>
+                                        </td>
+                                        <td>€10.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA NAPOLETANA</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, mozzarella, ansjovis</p>
+                                        </td>
+                                        <td>€11.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA 4 STAGIONI</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, mozzarella, champignons, hesp, salami, artisjok</p>
+                                        </td>
+                                        <td>€14.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA CAPRICCIOSA</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, mozzarella, hesp, champignons</p>
+                                        </td>
+                                        <td>€12.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA FRUTTI DI MARE</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, mozzarella, zeevruchten</p>
+                                        </td>
+                                        <td>€14.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA FORMAGGI</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, verschillende kaassoorten</p>
+                                        </td>
+                                        <td>€15.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA ALLA ROMANA</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, mozzarella, pikante salami</p>
+                                        </td>
+                                        <td>€12.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA PAESANA</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, mozzarella, paprika, salami, olijven</p>
+                                        </td>
+                                        <td>€13.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA HAWAIËN</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, mozzarella, hesp, ananas</p>
+                                        </td>
+                                        <td>€12.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PIZZA GORGONZOLA E RUCOLA</h3>
+                                            <p class="is-size-7 is-italic">Tomaat, gorgonzola, rucola</p>
+                                        </td>
+                                        <td>€12.50</td>
+                                    </tr>                                  
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="column is-two-fifths is-half-tablet">
+                            <table class="table is-fullwidth">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">PIZZA DELLA CASA</h3>
+                                                <p class="is-size-7 is-italic">Tomaat, mozzarella, ansjovis, ajuin, salami, champignons, olijven, ei</p>
+                                            </td>
+                                            <td>€17.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">PIZZA SICILIANA</h3>
+                                                <p class="is-size-7 is-italic">Tomaat, mozzarella, tonijn, olijven, ansjovis, kappertjes</p>
+                                            </td>
+                                            <td>€12.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">PIZZA AL TONNO</h3>
+                                                <p class="is-size-7 is-italic">Tomaat, mozzarella, tonijn</p>
+                                            </td>
+                                            <td>€11.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">PIZZA PESTO FORMAGGIO DI CAPRA E RUCOLA</h3>
+                                                <p class="is-size-7 is-italic">Tomaat, mozzarella, pesto, geitenkaas, rucola</p>
+                                            </td>
+                                            <td>€15.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">PIZZA KRISTOF</h3>
+                                                <p class="is-size-7 is-italic">Tomaat, mozzarella, hesp, champignons</p>
+                                            </td>
+                                            <td>€12.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">PIZZA JO</h3>
+                                                <p class="is-size-7 is-italic">Tomaat, mozzarella, pikante salami, gorgonzola, ajuin, rucola</p>
+                                            </td>
+                                            <td>€15.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">PIZZA JUSTINE</h3>
+                                                <p class="is-size-7 is-italic">Tomaat, mozzarella, scampi</p>
+                                            </td>
+                                            <td>€12.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">PIZZA PARMA PARMIGIANO E RUCOLA</h3>
+                                                <p class="is-size-7 is-italic">Tomaat, mozzarella, parmaham, rucola</p>
+                                            </td>
+                                            <td>€12.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold"> </h3>
+                                                <p class="is-size-7 is-italic">Extra tomaat, ajuin, olijven, ananas, rucola</p>
+                                            </td>
+                                            <td>€0.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold"> </h3>
+                                                <p class="is-size-7 is-italic">Extra ei, hasp, kaas (mozzarella, gorgonzola, ...)</p>
+                                            </td>
+                                            <td>€1.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold"> </h3>
+                                                <p class="is-size-7 is-italic">Extra Parmaham</p>
+                                            </td>
+                                            <td>€6.00</td>
+                                        </tr>                                               
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="Pasta" class="content-tab column is-four-fifths-desktop" style="display:none">
+                        <div class="columns is-centered">
+                                <div class="column is-two-fifths is-half-tablet">
+                                    <table class="table is-fullwidth">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">SPAGHETTI PESTO</h3>
+                                                    <p class="is-size-7 is-italic">Heerlijke spaghetti met een fluweelzachte saus op basis van basilicum, pijnboompitten en parmezaanse kaas</p>
+                                                </td>
+                                                <td>€15.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">SPAGHETTI VEGETARIANA</h3>
+                                                    <p class="is-size-7 is-italic">Een groentenbom in een bord spaghetti! Tomaten, artisjok, paprika, ajuin en olijven in een tomatensausje</p>
+                                                </td>
+                                                <td>€10.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">SPAGHETTI BOLOGNESE</h3>
+                                                    <p class="is-size-7 is-italic">Hoeft deze nog uitleg... De Italiaanse klassieker bij uitstek!</p>
+                                                </td>
+                                                <td>€11.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">SPAGHETTI FRUTTI DI MARE</h3>
+                                                    <p class="is-size-7 is-italic">Het beste wat de zee te beiden heeft geserveerd in een heerlijk bord pasta</p>
+                                                </td>
+                                                <td>€14.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">SPAGHETTI CARBONARA</h3>
+                                                    <p class="is-size-7 is-italic">Nog een klassieker uit de Italiaanse keuken! Spek, ei en Parmezaanse kaas. Was het maar niet o zo lekker!</p>
+                                                </td>
+                                                <td>€12.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">SPAGHETTI AGLIO, OLIO & PEPERONCINO</h3>
+                                                    <p class="is-size-7 is-italic">Olijfolie, look & chilipeper... 3 eenvoudige ingrediënten maar zoveel smaak</p>
+                                                </td>
+                                                <td>€14.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">SPAGHETTI ALLE VONGOLE</h3>
+                                                    <p class="is-size-7 is-italic">Spaghetti met venusschelpen, gewoon puur klaargemaakt met look en peterselie</p>
+                                                </td>
+                                                <td>€15.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">SPAGHETTI PESCATORE</h3>
+                                                    <p class="is-size-7 is-italic">De zee in je bord! Scampi's en Gambas klaargemaakt in een sausje op basis van verse tomaten! Een absolute aanrader!</p>
+                                                </td>
+                                                <td>€12.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">LASAGNA DELLA CASA</h3>
+                                                    <p class="is-size-7 is-italic">Heerlijke lagen pasta afgewisseld met Bolognaise, Parmezaanse kaas en room!</p>
+                                                </td>
+                                                <td>€13.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">TAGLIATELLE CON SCAMPI</h3>
+                                                    <p class="is-size-7 is-italic">Tagliatelle met scampi's in een Mediteraanse tomantensaus</p>
+                                                </td>
+                                                <td>€12.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">TAGLIATELLE POMODORO & BASILICO</h3>
+                                                    <p class="is-size-7 is-italic">De Italiaanse keuken in al haar eenvoud... Tagliatelle in een tomatensaus afgewerkt met basilicum</p>
+                                                </td>
+                                                <td>€12.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">TAGLIATELLE GRATINATE</h3>
+                                                    <p class="is-size-7 is-italic">Tagliatelle in een romige saus met hesp die nog even de oven in gaat voor een heerlijke knapperig korstje van parmezaan</p>
+                                                </td>
+                                                <td>€12.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h3 class="is-title has-text-weight-semibold">TAGLIATELLE CASA</h3>
+                                                    <p class="is-size-7 is-italic">Dit gerecht typeert onze huisstijl, simpel en no-nonsense! Tagliatelle in een romige Bolognaise saus met stukjes hesp en champignons</p>
+                                                </td>
+                                                <td>€12.50</td>
+                                            </tr>                                     
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="column is-two-fifths is-half-tablet">
+                                    <table class="table is-fullwidth">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">PENNE AL SALMONE</h3>
+                                                        <p class="is-size-7 is-italic">Penne in een romige tomatensaus aangevuld met heerlijke stukken verse zalm!</p>
+                                                    </td>
+                                                    <td>€17.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">PENNE DIAVOLA</h3>
+                                                        <p class="is-size-7 is-italic">Duivelse pasta! Romige pittige Bolognaise saus!</p>
+                                                    </td>
+                                                    <td>€12.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">PENNE ARRABIATA</h3>
+                                                        <p class="is-size-7 is-italic">Angry pasta! Penne met een pittige tomatensaus!</p>
+                                                    </td>
+                                                    <td>€11.50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">PENNE POMODORO</h3>
+                                                        <p class="is-size-7 is-italic">Penne met mozzarella en verse tomaten afgewerkt met frisse rucola</p>
+                                                    </td>
+                                                    <td>€15.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">PENNE FORMAGGI</h3>
+                                                        <p class="is-size-7 is-italic">De pasta bij uitstek voor iedere kaasliefhebbber!</p>
+                                                    </td>
+                                                    <td>€12.50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">PENNE DELLA CASA</h3>
+                                                        <p class="is-size-7 is-italic">Onze "Signature dish"! Een echte smaakbom! Bolognaise, room, pesto en spekjes verenigd in een hemelse saus!</p>
+                                                    </td>
+                                                    <td>€15.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">TORTELLINI ALLA PANNA</h3>
+                                                        <p class="is-size-7 is-italic">Tortellini met een vleesvulling in een sausje op basis van room en hesp</p>
+                                                    </td>
+                                                    <td>€12.50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">RAVIOLI AL FORNO</h3>
+                                                        <p class="is-size-7 is-italic">Ravioli met een vleesvulling in een romige Bolognaise saus, afgewerkt in de oven voor een knapperig korstje van Parmezaan</p>
+                                                    </td>
+                                                    <td>€12.50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">RAVIOLI NERI AL SALMONE</h3>
+                                                        <p class="is-size-7 is-italic">Ravioli gekleurd met inktvis inkt en gerserveerd in een romige tomatensaus aangevuld met verse stukken zalm!</p>
+                                                    </td>
+                                                    <td>€0.50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">RAVIOLI AI FUNGHI DI BOSCO</h3>
+                                                        <p class="is-size-7 is-italic">Heerlijke ravioli met een vulling van ricotta en funghi porcini in een sausje met paddestoelen en verse tomaat!</p>
+                                                    </td>
+                                                    <td>€1.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">RAVIOLI ROSSI CON TARTUFO E NOCI</h3>
+                                                        <p class="is-size-7 is-italic">Gekleurde ravioli met een vulling van zongedroogde tomaten en mozzarella di Bufala in een romige truffelsaus, afgewerkt met gehakte walnoten</p>
+                                                    </td>
+                                                    <td>€6.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">RAVIOLI RICOTTA E SPINACI CON PESTO DI RUCOLA</h3>
+                                                        <p class="is-size-7 is-italic">Ravioli met een vulling van ricotta en spinazie in een romige saus op basis van zongedroogde tomaten en rucola</p>
+                                                    </td>
+                                                    <td>€6.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="is-title has-text-weight-semibold">ASSORTIMENTO DI PASTA</h3>
+                                                        <p class="is-size-7 is-italic">Laat je verrassen door onze chef die je 3 verschillende soorten pasta serveert op 1 bord! Vanaf 2 personen.</p>
+                                                    </td>
+                                                    <td>€6.00</td>
+                                                </tr>                                                  
+                                            </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                </div>
+                <div id="Secondi" class="content-tab column is-four-fifths-desktop" style="display:none">
+                    <div class="columns is-centered">
+                        <div class="column is-two-fifths is-half-tablet">
+                            <table class="table is-fullwidth">
+                                    <tbody>
+                                        <th><h2 class="color-red is-title has-text-weight-bold has-text-centered">CARNE</h2></th>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">SCALOPPINA ALLA MILANESE</h3>
+                                                <p class="is-size-7 is-italic">Het favoriete gerecht van Frank Sinatra! Een krokant gebakken, gepaneerd, varkenslapje geserveerd met een groene salade</p>
+                                            </td>
+                                            <td>€14.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">BISTECCA</h3>
+                                                <p class="is-size-7 is-italic">Chateaubriand gebakken naar uw keuze en geserveerd met een groene salade. Sauzen: Champignon, Peper of Gorgonzola</p>
+                                            </td>
+                                            <td>€14.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">ANTIPASTO ALL'ITALIANA</h3>
+                                                <p class="is-size-7 is-italic">Italiaanse aperitiefschotel met verschillende vleeswaren aangevuld met zondergedroogde tomaten, olijven en gegrilde mediteraanse groenten. Ideaal om te delen!</p>
+                                            </td>
+                                            <td>€14.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h3 class="is-title has-text-weight-semibold">TAGLIATA DI MANZO</h3>
+                                                <p class="is-size-7 is-italic">Een dungesneden entrecôte van Belgisch Blauw-Wit geserveerd op een bedje van frisse rucola en afgewerkt met Parmezaan schilfers</p>
+                                            </td>
+                                            <td>€15.00</td>
+                                        </tr>                         
+                                    </tbody>
+                            </table>
+                        </div>
+                        <div class="column is-two-fifths is-half-tablet">
+                            <table class="table is-fullwidth">
+                                <tbody>
+                                    <th><h2 class="color-blue is-title has-text-weight-bold has-text-centered">PESCE</h2></th>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">SCAMPI DELLA CASA</h3>
+                                            <p class="is-size-7 is-italic">7 scampi's geserveerd in een getomateerde, licht pittige, roomsaus</p>
+                                        </td>
+                                        <td>€14.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">SCAMPI ALL' AGLIO</h3>
+                                            <p class="is-size-7 is-italic">7 scampi's geserveerd in een klassieke Italiaanse looksaus</p>
+                                        </td>
+                                        <td>€14.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">GAMBAS</h3>
+                                            <p class="is-size-7 is-italic">6 gebakken gambas geserveerd met een frisse groene salade</p>
+                                        </td>
+                                        <td>€14.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">PESCE SPADA ALLA GRIGLIA</h3>
+                                            <p class="is-size-7 is-italic">Zwaardvis gebakken op de grill en geserveerd met een zuiderse ratatouille</p>
+                                        </td>
+                                        <td>dagprijs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold">TONNO ALLA GRIGLIA</h3>
+                                            <p class="is-size-7 is-italic">Tonijn gebakken op de grill en geserveerd met een zuiderse ratatouille</p>
+                                        </td>
+                                        <td>dagprijs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 class="is-title has-text-weight-semibold"></h3>
+                                            <p class="is-size-7 is-italic">Alles wordt geserveerd met pasta, gebakken aardappelen of salade</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>                            
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- PARALLAX -->
+
+    <section id="parallax_bottom" class="parallax">
+        <div class="columns quote">
+            <div class="column auto"></div>
+            <div class="column is-half-desktop is-three-fifths-tablet">
+                <h1 class="title has-text-white is-size-5-mobile">" Het leven is een combinatie van magie en pasta. "</h1>
+                <h4 class="subtitle has-text-white">Federico Fellini</h4>
+            </div>
+            <div class="column auto"></div>
+        </div>
+    </section>
+
+    <!-- RESERVATIES -->
+    <section id="reservations" class="section">
+        <h1 class="title has-text-centered">Hongerke? Zin in 🍕 of toch liever 🍝?<br>Reserveer alvast je tafel!</h1>
+        <div class="column is-half is-offset-one-quarter">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Naam</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control is-expanded">
+                            <input id="user_name" class="input" type="text" placeholder="Jan Janssens" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Email</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control is-expanded has-icons-left has-icons-right">
+                            <input id="user_email" class="input" type="email" placeholder="Email" required>
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-exclamation-triangle is-danger bad-email visible"></i>
+                            </span>
+                        </p>
+                        <div class="bad-email-warning visible">
+                                <p class="help bad-email-warning is-danger visible">Gelieve een geldig emailadres op te geven</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">Telefoon</label>
+                </div>
+                    <div class="field-body">
+                        <div class="field is-expanded">
+                            <div class="field has-addons">
+                                <p class="control">
+                                <a class="button is-static">
+                                    +32
+                                </a>
+                                </p>
+                                <p class="control is-expanded">
+                                <input class="input" type="tel" placeholder="Uw telefoonnummer">
+                                </p>
+                            </div>
+                        <p class="help">Geef niet de eerste nul in</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Personen</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="select">
+                            <select id="visitors">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>9+</option>
+                            </select>
+                        </div>
+                        <div class="warning-message visible">
+                            <p class="help">Gelieve het exacte aantal personen op te geven in de opmerkingen!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label id="reservation-data" class="label">Wanneer?</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <!-- <p class="control">
+                            <input id="dateTimePicker" class="date input" type="DateTime" data-date-Format="DD/MM/YYYY" value="01/01/2019 12:00">
+                        </p> -->
+                        <div class="reservation-warning-message visible color-red">
+                            <p class="help">Het is niet mogelijk een online reservatie te plaatsen voor dezelfde dag. Gelieve ons telefonisch te contacteren.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Opmerkingen</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <textarea id="text" class="textarea" placeholder="Opmerkingen, allergieën, ..." maxlength="2000"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                    <div class="field-label">
+                      <!-- Left empty for spacing -->
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control">
+                          <button id="btn-reservation" class="button is-warning">
+                            Verstuur je reservatie
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        </div>
+    </section>
+
+    <!-- RESERVATIE GELUKT -->
+    <section class="reservation-success section visible">
+        <a class="btn-back" type="button"><i class="fas fa-arrow-left fa-2x return"></i></a> 
+        <h1 class="is-title has-text-centered has-text-weight-bold">Bedankt voor je reservering!</h1>
+        <p class="has-text-centered">We bekijken je reservatie en sturen je een bevestiging binnen de 24u! Niet bevestigde reservaties kunnen niet worden aangenomen!</p>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="section location">
+        <nav class="level">
+            <div class="level-item contact-level-item">
+                <div class="contacts"><i class="fas fa-phone fa-2x has-text-white"></i></div>
+                <div class="contact-details">
+                    <h1 class="is-title has-text-weight-semibold has-text-white">Telefoon</h1>
+                    <p class="has-text-white">+32 (0)9 224 35 54</p> 
+                </div>
+            </div>
+            <div class="level-item contact-level-item">
+                <div class="contacts"><i class="fas fa-envelope fa-2x has-text-white"></i></div>
+                <div class="contact-details">
+                    <h1 class="is-title has-text-weight-semibold has-text-white">Email</h1>
+                    <p class="has-text-white">info@pane-vino.eu</p>
+                </div>
+            </div>
+            <div class="level-item contact-level-item">
+                <div class="contacts"><i class="fas fa-map-marker fa-2x has-text-white"></i></div>
+                <div class="contact-details">
+                    <h1 class="is-title has-text-weight-semibold has-text-white">Adres</h1>
+                    <p class="has-text-white">Nederkouter 9, 9000 Gent</p>
+                </div>
+            </div>
+            <div class="level-item contact-level-item">
+                <div class="contacts"><i class="far fa-clock fa-2x has-text-white"></i></i></div>
+                <div class="contact-details">
+                    <h1 class="is-title has-text-weight-semibold has-text-white">Openingsuren</h1>
+                    <p class="has-text-white has-text-weight-semibold">MA - VRIJ</p>
+                    <p class="has-text-white">11u45 - 14u30 & 17u45 - 22u30</p>
+                    <p class="has-text-white has-text-weight-semibold">ZATERDAG & FEESTDAGEN</p>
+                    <p class="has-text-white">17u45 - 22u30</p>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="location">
+        <div class="content has-text-centered">
+            <p>
+            Made with ❤️ by Stefano
+            </p>
+        </div>
+    </footer>
+  </body>
+
+  <!-- SCRIPTS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="node_modules/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+  <script src="src/index.js"></script>
+
+</html>

@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    padding-bottom: 10px;
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    height: 5vw;
+}
+
+/* CLASS SELECTORS */
+
+.hero .background-image {
+    background-image: url(../images/background_1.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.visible {
+    visibility: hidden;
+    position: absolute;
+}
+
+.reservation-succes{
+    height: 48vw;
+}
+
+.return{
+    position: relative;
+    top: -20px;
+    left: 0px;
+}
+
+.color-red{
+    color: #fa4659;
+}
+
+.color-green{
+    color: #2eb872;
+}
+
+.color-blue{
+    color:#064acb;
+}
+
+.about-us{
+    margin-left: 60px;
+}
+
+.contacts{
+    float: left;
+    margin-right: 20px;
+}
+
+.location{
+    background-color: #427669;
+}
+
+.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Set a specific height */
+    height: 300px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ID SELECTOR */
+
+#parallax_upper {
+    background-image: url(../images/parallax_1.png);
+}
+
+#parallax_bottom {
+    background-image: url(../images/koffie_achtergrond.png);
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .contact-details{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .quote{
+        margin: 0 5%;
+    }
+
+    .about-us{
+        margin-left: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+ .datetimepicker-dummy-input{
+     width: 100%;
+ }
+
+}
